@@ -1,0 +1,11 @@
+{
+  "budget_usd": 0.25,
+  "estimated_total_usd": 0.1,
+  "observed_credit_decrease_usd": 0.02802262027800495,
+  "instance_id": 59714824,
+  "gpu": "RTX 3060 12 GB",
+  "hourly_compute_and_disk_usd": 0.07377777777777778,
+  "instance_confirmed_destroyed": true,
+  "results_checksum_verified": true,
+  "method": "Account credit before rental minus after destruction; no other instances were listed."
+}

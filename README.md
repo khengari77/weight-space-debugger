@@ -113,6 +113,14 @@ and [the separate agent reasoning evaluation cards](examples/skill-evaluation.md
 Script tests do not validate an agent's mechanistic reasoning, and no blind real-model
 repair benchmark has been performed.
 
+## Successful weight-repair showcase
+
+[Whisper-small: rewriting one neuron to suppress invented words](examples/whisper-case-study.md)
+reduced the measured default-rule failure rate from **38% to 1.5%**, with
+**200/200 speech transcripts unchanged**, by editing **1,537 parameters**.
+The GPU run cost **$0.0280** and includes matched controls, held-out evaluation,
+fresh reload verification, figures, and reproducible code.
+
 ## Real-model case study
 
 [RobustMNIST: a 455,991-parameter published classifier](examples/robustmnist-case-study.md)

@@ -1,0 +1,494 @@
+{
+  "metrics": {
+    "base": {
+      "hallucination": 0.995,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200
+    },
+    "default": {
+      "hallucination": 0.38,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 1.0
+    },
+    "threshold_0.2": {
+      "hallucination": 0.0,
+      "speech_wer": {
+        "wer": 5.302,
+        "ins": 0.292,
+        "any_ins": 5.5,
+        "dropped": 2.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 0.98
+    },
+    "threshold_0.4": {
+      "hallucination": 0.05,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 1.0
+    },
+    "threshold_0.6": {
+      "hallucination": 0.24,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 1.0
+    },
+    "threshold_0.8": {
+      "hallucination": 0.69,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 1.0
+    },
+    "patch": {
+      "hallucination": 0.015,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 1.0
+    },
+    "random_0": {
+      "hallucination": 0.995,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 1.0
+    },
+    "random_1": {
+      "hallucination": 0.995,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 1.0
+    },
+    "random_2": {
+      "hallucination": 0.995,
+      "speech_wer": {
+        "wer": 4.304,
+        "ins": 0.34,
+        "any_ins": 6.5,
+        "dropped": 0.0,
+        "n": 200
+      },
+      "n_nonspeech": 200,
+      "n_speech": 200,
+      "speech_kept": 1.0
+    }
+  },
+  "patch": {
+    "changed_entries": 1537,
+    "total_parameters": 241734912,
+    "layer": "model.decoder.layers.11.",
+    "neuron": 304,
+    "gain": 2.0,
+    "threshold": 21.90252685546875
+  },
+  "tensor_details": {
+    "tensors": [
+      {
+        "tensor": "model.decoder.layers.11.fc1.bias",
+        "shape": [
+          3072
+        ],
+        "changed_entries": 1,
+        "delta_l2": 20.40252685546875,
+        "relative_l2": 0.49992323607650635,
+        "edited_tensor_sha256": "17ca51483265e28ab2d7f8c2ea0afd25c8a703bbdc83b94c2035ecb19b5f9140"
+      },
+      {
+        "tensor": "model.decoder.layers.11.fc1.weight",
+        "shape": [
+          3072,
+          768
+        ],
+        "changed_entries": 768,
+        "delta_l2": 1.4059411026911313,
+        "relative_l2": 0.04894528905507184,
+        "edited_tensor_sha256": "1f26394ae9840f2de45a53f246b41e22784b87a750b79ad6ad3e24343ecb0584"
+      },
+      {
+        "tensor": "model.decoder.layers.11.fc2.weight",
+        "shape": [
+          768,
+          3072
+        ],
+        "changed_entries": 768,
+        "delta_l2": 2.0729942833420134,
+        "relative_l2": 0.06793191068840099,
+        "edited_tensor_sha256": "927ca6ce48cefc109a4a3364204eaa82701eeb04f55aa6a3de02ea523245220f"
+      }
+    ],
+    "patch_sha256": "578098ff667dddf22ea36a491f4c98bee0260668e59db6aa7d42433689834cf2"
+  },
+  "verdict": {
+    "status": "evaluated",
+    "patch_passes_point_estimates": true,
+    "restored": true
+  },
+  "fresh_reload": {
+    "examples": 8,
+    "tokens_equal": true
+  },
+  "paired_improvement_ci95": [
+    0.959178440607012,
+    0.9951219512195122
+  ],
+  "bootstrap": {
+    "unit": "original environmental recording",
+    "groups": 187,
+    "replicates": 2000,
+    "seed": 2026
+  },
+  "speech_unchanged_count": 200,
+  "speech_count": 200,
+  "failure_count_before": 199,
+  "failure_count_after": 3,
+  "non_speech_count": 200,
+  "run": {
+    "start": 1794143315.9540925,
+    "seed": 2026,
+    "code_sha": "a92bb0effb0b46865fa5107aa5d359841da3bc93",
+    "model_revision": "973afd24965f72e36ca33b3055d56a652f456b4d",
+    "data_sha256": "1c903a3da26ae4a89fc080a85dbae8636cedfeab0d8064032fe2e8372bd7e53b",
+    "torch": "2.5.1+cu124",
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "backward_passes": 0,
+    "supervision": "Mean activation contrast from labelled diagnostic clips; no model optimizer"
+  },
+  "runtime": {
+    "seconds": 971.5068717002869
+  },
+  "selection": {
+    "layer": 11,
+    "neuron": 304,
+    "threshold": 24.420050621032715,
+    "ns_projection": [
+      36.92933654785156,
+      36.01396179199219,
+      33.570892333984375,
+      34.19617462158203,
+      39.59332275390625,
+      37.9091911315918,
+      35.76050567626953,
+      38.56867218017578,
+      37.200782775878906,
+      36.00895690917969,
+      40.81353759765625,
+      38.01354217529297,
+      35.63282012939453,
+      32.71590805053711,
+      34.23231506347656,
+      37.963356018066406,
+      32.88921356201172,
+      37.718849182128906,
+      36.43614959716797,
+      36.71000671386719,
+      38.56171417236328,
+      39.68193817138672,
+      37.021724700927734,
+      40.821495056152344,
+      39.624149322509766,
+      36.63777542114258,
+      38.86677169799805,
+      39.151519775390625,
+      37.010650634765625,
+      38.3310546875,
+      29.599037170410156,
+      36.98735046386719,
+      27.93757438659668,
+      34.60366439819336,
+      37.95222473144531,
+      36.50593948364258,
+      37.69731903076172,
+      33.282264709472656,
+      41.15532684326172,
+      37.94562911987305
+    ],
+    "speech_projection_max": 20.90252685546875,
+    "candidates": [
+      {
+        "gain": 2.0,
+        "threshold": 24.420050621032715,
+        "hallucination": 0.025,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      },
+      {
+        "gain": 4.0,
+        "threshold": 24.420050621032715,
+        "hallucination": 0.025,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      },
+      {
+        "gain": 8.0,
+        "threshold": 24.420050621032715,
+        "hallucination": 0.025,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      },
+      {
+        "gain": 2.0,
+        "threshold": 21.90252685546875,
+        "hallucination": 0.0,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      },
+      {
+        "gain": 4.0,
+        "threshold": 21.90252685546875,
+        "hallucination": 0.0,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      },
+      {
+        "gain": 8.0,
+        "threshold": 21.90252685546875,
+        "hallucination": 0.0,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      },
+      {
+        "gain": 2.0,
+        "threshold": 24.90252685546875,
+        "hallucination": 0.025,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      },
+      {
+        "gain": 4.0,
+        "threshold": 24.90252685546875,
+        "hallucination": 0.025,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      },
+      {
+        "gain": 8.0,
+        "threshold": 24.90252685546875,
+        "hallucination": 0.025,
+        "speech_wer": {
+          "wer": 3.679,
+          "ins": 0.223,
+          "any_ins": 5.0,
+          "dropped": 0.0,
+          "n": 40
+        },
+        "n_nonspeech": 40,
+        "n_speech": 40,
+        "speech_kept": 1.0
+      }
+    ],
+    "selected": {
+      "gain": 2.0,
+      "threshold": 21.90252685546875,
+      "hallucination": 0.0,
+      "speech_wer": {
+        "wer": 3.679,
+        "ins": 0.223,
+        "any_ins": 5.0,
+        "dropped": 0.0,
+        "n": 40
+      },
+      "n_nonspeech": 40,
+      "n_speech": 40,
+      "speech_kept": 1.0
+    }
+  },
+  "raw_speech_unchanged_count": 200,
+  "accepted": true,
+  "examples": [
+    {
+      "id": "4-145006-A-18.wav",
+      "category": "toilet_flush",
+      "before": " I",
+      "after": ".",
+      "audio_url": "https://github.com/karolpiczak/ESC-50/blob/master/audio/4-145006-A-18.wav"
+    },
+    {
+      "id": "3-158476-A-12.wav",
+      "category": "crackling_fire",
+      "before": " That's perfect.",
+      "after": ".",
+      "audio_url": "https://github.com/karolpiczak/ESC-50/blob/master/audio/3-158476-A-12.wav"
+    },
+    {
+      "id": "5-263902-A-36.wav",
+      "category": "vacuum_cleaner",
+      "before": " I",
+      "after": ".",
+      "audio_url": "https://github.com/karolpiczak/ESC-50/blob/master/audio/5-263902-A-36.wav"
+    },
+    {
+      "id": "5-257839-A-14.wav",
+      "category": "chirping_birds",
+      "before": " you",
+      "after": ".",
+      "audio_url": "https://github.com/karolpiczak/ESC-50/blob/master/audio/5-257839-A-14.wav"
+    }
+  ],
+  "hallucination_ci95": {
+    "base": [
+      0.9844559585492227,
+      1.0
+    ],
+    "default": [
+      0.30845771144278605,
+      0.44777406073082854
+    ],
+    "threshold_0.2": [
+      0.0,
+      0.0
+    ],
+    "threshold_0.4": [
+      0.020510204081632653,
+      0.08290218627574877
+    ],
+    "threshold_0.6": [
+      0.18179534033805392,
+      0.30050580577058406
+    ],
+    "threshold_0.8": [
+      0.6211946386946386,
+      0.752476497649765
+    ],
+    "patch": [
+      0.0,
+      0.035
+    ],
+    "random_0": [
+      0.9844559585492227,
+      1.0
+    ],
+    "random_1": [
+      0.9844559585492227,
+      1.0
+    ],
+    "random_2": [
+      0.9844559585492227,
+      1.0
+    ]
+  },
+  "default_vs_patch_improvement_ci95": [
+    0.29352576061997704,
+    0.4362745098039216
+  ]
+}
