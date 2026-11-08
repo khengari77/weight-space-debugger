@@ -17,7 +17,7 @@ assert len({r['id'] for r in items})==len(items)
 for split in ['diagnostic','development','test']:
  for other in ['diagnostic','development','test']:
   if split!=other:assert not ({r['group'] for r in items if r['split']==split}&{r['group'] for r in items if r['split']==other})
-save('run.json',dict(start=time.time(),seed=2026,model_revision='973afd24965f72e36ca33b3055d56a652f456b4d',data_sha256=hashlib.sha256((ROOT/'manifest.json').read_bytes()).hexdigest(),torch=torch.__version__,gpu=torch.cuda.get_device_name(),backward_passes=0,supervision='Mean activation contrast from labelled diagnostic clips; no model optimizer'))
+save('run.json',dict(start=time.time(),seed=2026,code_sha=os.environ.get('STUDY_CODE_SHA'),model_revision='973afd24965f72e36ca33b3055d56a652f456b4d',data_sha256=hashlib.sha256((ROOT/'manifest.json').read_bytes()).hexdigest(),torch=torch.__version__,gpu=torch.cuda.get_device_name(),backward_passes=0,supervision='Mean activation contrast from labelled diagnostic clips; no model optimizer'))
 proc,model=W.load('openai/whisper-small');model.to('cuda');tok=W.Tok(model,proc);P=f'model.decoder.layers.{model.config.decoder_layers-1}.';params=dict(model.named_parameters());layer=model.model.decoder.layers[-1]
 def run(split,tag,capture=False,hook=None):
  selected=[r for r in items if r['split']==split];rows=[];features=[]
@@ -65,15 +65,16 @@ competitors=sorted({t for r in diag if r['kind']=='nonspeech' for t in r['top_fi
 E=params['model.decoder.embed_tokens.weight'].detach().cpu();v=(E[dot]-E[competitors].mean(0))/params['model.decoder.layer_norm.weight'].detach().cpu();v=v/v.norm()
 original={P+'fc1.weight':w1,P+'fc1.bias':b1,P+'fc2.weight':w2}
 @torch.no_grad()
-def apply(gain,direction=d,write=v):
+def apply(gain,direction=d,write=v,cutoff=None):
  for name,value in original.items():params[name].copy_(value.to('cuda'))
- params[P+'fc1.weight'][j].copy_(direction.to('cuda'));params[P+'fc1.bias'][j]=-threshold;params[P+'fc2.weight'][:,j].copy_((gain*write).to('cuda'))
+ params[P+'fc1.weight'][j].copy_(direction.to('cuda'));params[P+'fc1.bias'][j]=-(threshold if cutoff is None else cutoff);params[P+'fc2.weight'][:,j].copy_((gain*write).to('cuda'))
 @torch.no_grad()
 def restore():
  for name,value in original.items():params[name].copy_(value.to('cuda'))
 dev,_=run('development','development_base');baseline=score(dev);candidates=[]
-for gain in [2.,4.,8.]:
- apply(gain);rows,_=run('development','development_gain_'+str(gain));s=score(rows,dev);candidates.append({'gain':gain,**s})
+for cutoff in [threshold,float(allsp.max())+1,float(allsp.max())+4]:
+ for gain in [2.,4.,8.]:
+  apply(gain,cutoff=cutoff);rows,_=run('development','development_gain_'+str(gain)+'_cut_'+str(round(cutoff,3)));s=score(rows,dev);candidates.append({'gain':gain,'threshold':cutoff,**s})
 restore();valid=[c for c in candidates if c['speech_kept']>=.99 and c['speech_wer']['wer']<=baseline['speech_wer']['wer']+.5];best=min(valid,key=lambda c:c['hallucination']) if valid else None
 save('selection.json',{'layer':model.config.decoder_layers-1,'neuron':j,'threshold':threshold,'ns_projection':nsproj.tolist(),'speech_projection_max':float(allsp.max()),'candidates':candidates,'selected':best})
 base,_=run('test','test_base');metrics={'base':score(base)}
@@ -83,7 +84,7 @@ for label,cfg in [('default',W.OPENAI_DEFAULT)]+[(f'threshold_{t}',{'no_speech':
  if label=='default' or (s['speech_kept']>=.99 and s['speech_wer']['wer']<=baseline['speech_wer']['wer']+.5):
   rows=[{**r,'text':r['text'] if W.threshold_keep(r,cfg) else ''} for r in base];metrics[label]=score(rows,base);save('test_'+label+'.json',rows)
 if best:
- apply(best['gain']);patched,_=run('test','test_patch');metrics['patch']=score(patched,base)
+ threshold=best['threshold'];apply(best['gain']);patched,_=run('test','test_patch');metrics['patch']=score(patched,base)
  patch={k:params[k].detach().cpu().contiguous() for k in original};save_file(patch,str(OUT/'patch.safetensors'))
  save('patch_manifest.json',{'changed_entries':sum(int((patch[k]!=original[k]).sum()) for k in original),'total_parameters':sum(p.numel() for p in model.parameters()),'layer':P,'neuron':j,'gain':best['gain'],'threshold':threshold})
  restore()
