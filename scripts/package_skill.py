@@ -16,7 +16,7 @@ PACKAGE_GLOBS = (
     ".gitignore", "SKILL.md", "README.md", "LICENSE", "requirements.txt",
     "requirements-dev.txt", "pytest.ini", "agents/*.yaml", "scripts/*.py", "references/*.md",
     "assets/*.md", "assets/*.json", "examples/*.md", "examples/*.py",
-    "examples/toy-result.json", "examples/robustmnist/*.json", "examples/robustmnist/*.png", "tests/*.py", ".github/workflows/*.yml",
+    "examples/toy-result.json", "examples/robustmnist/*.json", "examples/robustmnist/*.png", "examples/whisper/*.py", "examples/whisper/UPSTREAM-LICENSE", "tests/*.py", ".github/workflows/*.yml",
 )
 
 

@@ -133,6 +133,31 @@
       "bytes": 4410
     },
     {
+      "path": "examples/whisper/UPSTREAM-LICENSE",
+      "sha256": "4e768ce159b3c5ea521785430ba140ac89be4e30ba819e4814698a16b5768d0d",
+      "bytes": 1070
+    },
+    {
+      "path": "examples/whisper/augment.py",
+      "sha256": "e24ab1a60fc812d2da1d1bfbffe7656d9b792255a501690af24d2c15ea6af316",
+      "bytes": 1102
+    },
+    {
+      "path": "examples/whisper/core.py",
+      "sha256": "8a0ba871f36a8eae201707ba23773b8e9b9683597361e5b12d062d4255238494",
+      "bytes": 12818
+    },
+    {
+      "path": "examples/whisper/prepare.py",
+      "sha256": "658e724d41d139ef69d759f3f593100852050543eb538fc9df776e0aa5e19759",
+      "bytes": 2642
+    },
+    {
+      "path": "examples/whisper/run.py",
+      "sha256": "ef5098c8255d8c60d2391b5275abadd5f9c9104b18dd3f6b9ad9d617b13f2472",
+      "bytes": 7428
+    },
+    {
       "path": "pytest.ini",
       "sha256": "c809c969ec7e11b9ff37784e9c6fcc0b7c5148d168e18b05aed797e03fbd6ead",
       "bytes": 27
@@ -214,8 +239,8 @@
     },
     {
       "path": "scripts/package_skill.py",
-      "sha256": "c9bd9105aee4a9db6f9fb8f2d9f352082e83907617b5c2338477f54f1986b20e",
-      "bytes": 5878
+      "sha256": "dd8890a8765130f45c3426c56526146025993c9cafb9340cd6c3f15e7d670d2e",
+      "bytes": 5940
     },
     {
       "path": "scripts/patching.py",
@@ -246,6 +271,11 @@
       "path": "tests/test_skill.py",
       "sha256": "7a1be49ef00fa8981b706a32c35faa1a7c27ee65c79687244f64800c87af2136",
       "bytes": 12250
+    },
+    {
+      "path": "tests/test_whisper_case.py",
+      "sha256": "f8fffc8f34225a1c5d4a971b91b72a9df8e1f9be1067c9a2d34209b40bb2c7ba",
+      "bytes": 1186
     }
   ],
   "notes": "Synthetic demonstration and real-model robustness case; no blind agent benchmark."
