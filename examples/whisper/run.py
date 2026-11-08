@@ -1,3 +1,11 @@
+"""Reproduce an existing Whisper repair; not an independently discovered fix.
+
+Repair algebra and neuron-selection recipe reimplement Kevin Bondzio's fit_gate:
+https://github.com/kevinpl07/weight-patching/blob/d7df0d9bd15afb952b1e0cb64a067806563aa8e3/tasks/whisper_silence.py
+Upstream MIT licence: UPSTREAM-LICENSE. Our data setup, development sweep and
+control refinements do not establish a novel repair method. The measured run's
+code revision is recorded separately in the case study and results.
+"""
 import json,time,hashlib,os,sys,random
 from pathlib import Path
 import numpy as np

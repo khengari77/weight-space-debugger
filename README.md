@@ -113,13 +113,25 @@ and [the separate agent reasoning evaluation cards](examples/skill-evaluation.md
 Script tests do not validate an agent's mechanistic reasoning, and no blind real-model
 repair benchmark has been performed.
 
-## Successful weight-repair showcase
+## Reproduction of an existing Whisper repair method
 
-[Whisper-small: rewriting one neuron to suppress invented words](examples/whisper-case-study.md)
-reduced the measured default-rule failure rate from **38% to 1.5%**, with
-**200/200 speech transcripts unchanged**, by editing **1,537 parameters**.
-The GPU run cost **$0.0280** and includes matched controls, held-out evaluation,
-fresh reload verification, figures, and reproducible code.
+**Codex found the fix in [Kevin Bondzio’s published weight-patching work](https://github.com/kevinpl07/weight-patching/tree/d7df0d9bd15afb952b1e0cb64a067806563aa8e3)
+and adapted it. It did not independently discover the fix.** The decoder helpers
+are substantially copied from that project, and the repair recipe and evaluation
+safeguards were already present upstream.
+
+[Our narrower Whisper-small reproduction](examples/whisper-case-study.md) measured
+a default-rule failure rate of **38% before the patch and 1.5% afterward**, with
+**200/200 speech transcripts unchanged**, after editing **1,537 parameters**.
+These are measurements from our run, not evidence of a novel repair algorithm,
+a better method than upstream, or autonomous discovery by the skill.
+
+The useful additions are a smaller evaluation setup, implementation refinements,
+new locally measured results, and Agent Skill packaging. **No significant new
+repair method or methodological advance has been established.** The observed
+GPU account-credit decrease was **$0.0280**; we have not demonstrated a cost
+advantage over the upstream study. See the case study for the contribution audit,
+controls, negative interventions, and limitations.
 
 ## Real-model case study
 

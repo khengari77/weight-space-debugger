@@ -36,7 +36,7 @@ def source_manifest(root: Path) -> dict:
                         "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)})
     return {"package": "weight-space-debugger", "skill_format": "agentskills.io",
             "files": records,
-            "notes": "Synthetic demonstration, real-model robustness audit and Whisper weight repair; no blind agent benchmark."}
+            "notes": "Synthetic demonstration, real-model robustness audit and reproduction of an existing Whisper repair; no novel repair method or blind agent benchmark established."}
 
 
 def validate_package(root: Path) -> list[str]:

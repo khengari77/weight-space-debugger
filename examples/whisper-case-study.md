@@ -1,10 +1,35 @@
-# Stopping invented words in Whisper by rewriting one neuron
+# Reproducing an existing Whisper neuron-gate repair
 
-**A measured repair on a real pretrained speech model, for $0.0280.** On 200 sealed environmental recordings, the default no-speech rule produced words for 76 clips (38%); our parameter edit reduced that to 3 clips (1.5%). All 200 genuine-speech transcripts remained byte-identical, and WER stayed at 4.304%.
+**Codex found this repair method in [Kevin Bondzio’s published work](https://github.com/kevinpl07/weight-patching/tree/d7df0d9bd15afb952b1e0cb64a067806563aa8e3)
+and adapted it. It did not independently discover the fix.** This is a reproduction
+with implementation and evaluation refinements. No significant new repair method
+or methodological advance has been established by this run.
+
+**A measured reproduction on a real pretrained speech model, for $0.0280.** On 200 sealed environmental recordings, the default no-speech rule produced words for 76 clips (38%); applying the adapted published method reduced that to 3 clips (1.5%). All 200 genuine-speech transcripts remained byte-identical, and WER stayed at 4.304%.
 
 The patch changes **1,537 of 241,734,912 parameters (0.000636%)**. It passed the predeclared repair and preservation gates. The paired improvement over the default rule was 36.5 percentage points, with a source-recording bootstrap 95% interval of **29.4–43.6 points** (2,000 replicates, seed 2026).
 
-## What changed
+## Contribution audit
+
+| Component | Origin and significance |
+|---|---|
+| Speech/non-speech activation contrast, low-usage neuron selection, threshold gate and period-token write | Existing upstream repair recipe; not discovered by Codex |
+| Decoder, normalization and supporting helpers | Substantially copied: 276 of 279 upstream helper lines were unchanged in the measured implementation; local changes added attribution, immutable revision pins and safetensors loading |
+| Held-out evaluation, decoding baselines, speech-preservation checks and random controls | Already present upstream; not methodological contributions of this project |
+| Data preparation and splits | Our smaller sample and augmentation setup using the same source corpora; a separate evaluation, not a new benchmark |
+| Threshold/strength sweep and random edits matched on actual delta norms | Limited implementation refinements; no isolated experiment establishes that they improve the upstream method |
+| Parity/reload checks, source-group intervals, artefact verification and cost accounting | Additional checks in this reproduction; not new scientific techniques |
+| Agent Skill integration and documentation | Useful engineering packaging; does not establish general autonomous debugging or discovery ability |
+
+The substantive value is a runnable reproduction and additional measurements on a
+different, smaller sample. We did not perform a controlled comparison with the
+upstream implementation on identical data, nor a blind investigator benchmark.
+The upstream study already reports successful Whisper repair and tests a broader
+speech-preservation suite. Our numbers cannot establish superior accuracy,
+robustness, efficiency, or a new mechanism. The low cost is an observation from
+this run, not evidence of an improvement over upstream.
+
+## Application of the borrowed method
 
 In decoder layer 11, neuron 304 reads a diagnostic speech/non-speech contrast direction. We replace its `fc1` row with that unit direction, its bias with −21.9025268555, and its `fc2` column with a gain-2 direction toward the period token, adjusted for final LayerNorm scaling. The neuron was selected by low diagnostic usage. It provides a conditional write when the non-speech signal exceeds the threshold.
 

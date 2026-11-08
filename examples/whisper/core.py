@@ -1,3 +1,7 @@
+# Substantially copied from Kevin Bondzio's _whisper_core.py, under MIT.
+# Measured implementation: 276 of 279 upstream lines unchanged; additions/pins
+# are attribution, immutable model/normalizer revisions and safetensors loading.
+# This decoder is borrowed code, not an independent implementation by Codex.
 # Derived from Kevin Bondzio, MIT, weight-patching@d7df0d9bd15afb952b1e0cb64a067806563aa8e3; see UPSTREAM-LICENSE.
 """Whisper helpers for tasks/whisper_silence.py (encoder-decoder, so not patchkit/llm.py).
 

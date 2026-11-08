@@ -15,6 +15,16 @@ Two or three sentences that separate the observed failure from its best-supporte
 For checkpoint-only forensics, mark unavailable behavioral metrics, dataset splits,
 causal tests and repair fields as not applicable; record zero model passes.
 
+## Provenance and contribution assessment
+
+- Prior work and pinned source revisions (hypotheses, method, code):
+- What was known from those sources before investigation:
+- Borrowed or copied components, licences and attribution:
+- Reproduction / adaptation / engineering refinements / independently developed findings:
+- Comparison of claimed additions with upstream evidence:
+- Significance demonstrated, or **novelty not established**:
+- Negative interventions and limits on causal, generality and discovery claims:
+
 ## Reproduction and baseline
 
 - Failure specification:

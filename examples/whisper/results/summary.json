@@ -490,5 +490,28 @@
   "default_vs_patch_improvement_ci95": [
     0.29352576061997704,
     0.4362745098039216
-  ]
+  ],
+  "provenance": {
+    "classification": "reproduction_with_implementation_and_evaluation_refinements",
+    "repair_method_source": "https://github.com/kevinpl07/weight-patching/tree/d7df0d9bd15afb952b1e0cb64a067806563aa8e3/tasks/whisper_silence.py",
+    "decoder_source": "https://github.com/kevinpl07/weight-patching/tree/d7df0d9bd15afb952b1e0cb64a067806563aa8e3/tasks/_whisper_core.py",
+    "independently_discovered_fix": false,
+    "novelty_assessment": "No significant new repair method or methodological advance established.",
+    "inherited_methods": [
+      "activation contrast and neuron-gate repair",
+      "decoder helpers",
+      "held-out evaluation",
+      "speech preservation checks",
+      "decoding baselines",
+      "random controls"
+    ],
+    "local_changes": [
+      "smaller evaluation sample and data preparation",
+      "development strength/threshold sweep",
+      "actual-delta-norm control matching",
+      "additional verification and uncertainty estimates",
+      "Agent Skill packaging"
+    ],
+    "comparison_limit": "No same-data upstream comparison or blind investigator benchmark; no superiority claim."
+  }
 }

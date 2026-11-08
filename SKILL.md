@@ -65,6 +65,16 @@ are required to call a persistent edit a fix. Report unsupported conclusions as
 Paths above are relative to this skill's directory; resolve them there even when
 working in another project. Load only the references relevant to the selected task.
 
+## Provenance and contribution claims
+
+Disclose sources of hypotheses, methods and code before presenting results. If a
+fix was found in prior work, say so explicitly; do not describe it as independently
+discovered. Separate reproduction, adaptation, engineering refinements and new
+findings. Compare claimed additions with the source: inherited evaluation controls
+are not original contributions. Use **novelty not established** when significance
+has not been demonstrated. Keep failed interventions and evidence limits visible;
+a successful reproduction does not establish autonomous discovery ability.
+
 ## Deliverables and stopping
 
 Use [the incident template](assets/incident-report.md) and

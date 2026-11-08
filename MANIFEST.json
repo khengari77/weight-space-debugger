@@ -19,13 +19,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "cba77e5e68eaf7011d3310614955547c7e52d561c2cd806e173c27a5214172b2",
-      "bytes": 6905
+      "sha256": "61747907200685c553fad2b4c5dedc13d64fff8f5cd2df511559a371ad1b12cb",
+      "bytes": 7745
     },
     {
       "path": "SKILL.md",
-      "sha256": "91ff58efd9788c0e48b7782b9c4c9de8a22148b6c418ca262fe063faed0bbdba",
-      "bytes": 6877
+      "sha256": "6fb7263d12a5324a7a5046900705e4cf8a7996e3aae24c86ddbf4deb0e7380ba",
+      "bytes": 7483
     },
     {
       "path": "agents/openai.yaml",
@@ -39,8 +39,8 @@
     },
     {
       "path": "assets/incident-report.md",
-      "sha256": "4ed97cd4674630f38efc9a9cd37ce38d93cc7880277b532957cf9affdc6cc162",
-      "bytes": 2634
+      "sha256": "a5e42d047892fdf10d2d79d4bba9dd309ea95a08a774ed40c35f89418012f851",
+      "bytes": 3153
     },
     {
       "path": "examples/plot_robustmnist.py",
@@ -144,8 +144,8 @@
     },
     {
       "path": "examples/whisper/core.py",
-      "sha256": "8a0ba871f36a8eae201707ba23773b8e9b9683597361e5b12d062d4255238494",
-      "bytes": 12818
+      "sha256": "2f4c64bc57b78d6fb3f1aa2b8601571f6ad4aa6b47ee4fb6629764555a714075",
+      "bytes": 13128
     },
     {
       "path": "examples/whisper/fix_splits.py",
@@ -174,23 +174,23 @@
     },
     {
       "path": "examples/whisper/results/summary.json",
-      "sha256": "5cca002ab5f963fc107a89c9d747974dc40036a01cdf2f63fc4be56b32bcd9ae",
-      "bytes": 11435
+      "sha256": "4c8f85d965b204c8fc9373955852e99207515f9ab51afbdc069803fb2cb50b53",
+      "bytes": 12580
     },
     {
       "path": "examples/whisper/run.py",
-      "sha256": "0ad270a6761975b7dc88a36e51ba639624e9fdafa58597e9a5e7702582570009",
-      "bytes": 9218
+      "sha256": "3a7b4e5cd612e18a7e1a82bc21f1676f7f9fb69ee3538176a472617e9b1600dc",
+      "bytes": 9723
     },
     {
       "path": "examples/whisper/summarize.py",
-      "sha256": "e744f264fa58e0977058846b7ffc4379700e4489e2d5a8d023e871f3f12f4cd7",
-      "bytes": 4883
+      "sha256": "5d0feca07fdbdaa35a94f327c02c55fc86278279ad3e46ad2b1556c938e13290",
+      "bytes": 5919
     },
     {
       "path": "examples/whisper-case-study.md",
-      "sha256": "cccc75f1a9f63aeea4f6d96a33217f5e1b11f72ee4062d483a1de9ead2193cc4",
-      "bytes": 6895
+      "sha256": "c7fa2c4067099fd60e19cfba015b2eb1cc9e95c52cbf23409121781512f1fbce",
+      "bytes": 9150
     },
     {
       "path": "pytest.ini",
@@ -274,8 +274,8 @@
     },
     {
       "path": "scripts/package_skill.py",
-      "sha256": "5d9678e9b8919756c7e09d295afafc6ed5016978b97891dccf978baee9a48b52",
-      "bytes": 6033
+      "sha256": "257540b91d304e6089b9704a2b5d0bbe2afa63ae089b410bc520659526cdc7ea",
+      "bytes": 6089
     },
     {
       "path": "scripts/patching.py",
@@ -313,5 +313,5 @@
       "bytes": 1186
     }
   ],
-  "notes": "Synthetic demonstration, real-model robustness audit and Whisper weight repair; no blind agent benchmark."
+  "notes": "Synthetic demonstration, real-model robustness audit and reproduction of an existing Whisper repair; no novel repair method or blind agent benchmark established."
 }
