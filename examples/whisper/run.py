@@ -13,6 +13,7 @@ ROOT=Path(os.environ.get('WHISPER_STUDY_DIR',str(Path(__file__).parent)));OUT=RO
 torch.set_num_threads(4);torch.manual_seed(2026);np.random.seed(2026);random.seed(2026)
 def save(name,obj):(OUT/name).write_text(json.dumps(obj,indent=2,default=str)+'\n')
 items=json.loads((ROOT/'manifest.json').read_text())
+for item in items:assert hashlib.sha256((ROOT/'data'/item['audio']).read_bytes()).hexdigest()==item['sha256']
 assert len({r['id'] for r in items})==len(items)
 for split in ['diagnostic','development','test']:
  for other in ['diagnostic','development','test']:
@@ -98,6 +99,16 @@ if best:
  patch={k:params[k].detach().cpu().contiguous() for k in original};save_file(patch,str(OUT/'patch.safetensors'))
  save('patch_manifest.json',{'changed_entries':sum(int((patch[k]!=original[k]).sum()) for k in original),'total_parameters':sum(p.numel() for p in model.parameters()),'layer':P,'neuron':j,'gain':best['gain'],'threshold':threshold})
  restore()
+ # Re-load the checkpoint and reapply the frozen patch, then reproduce sampled outputs.
+ fresh_proc,fresh=W.load('openai/whisper-small');fresh.to('cuda')
+ with torch.no_grad():
+  fp=dict(fresh.named_parameters())
+  for name,value in patch.items():fp[name].copy_(value.to('cuda'))
+ sample=[r for r in items if r['split']=='test'][:8]
+ check=W.transcribe(fresh,fresh_proc,W.Tok(fresh,fresh_proc),[np.load(ROOT/'data'/r['audio']) for r in sample],batch=8)
+ lookup={r['id']:r for r in patched}
+ save('fresh_reload.json',{'examples':len(sample),'tokens_equal':all(a['tokens']==lookup[b['id']]['tokens'] for a,b in zip(check,sample))})
+ del fresh;torch.cuda.empty_cache()
  for seed in range(3):
   g=torch.Generator().manual_seed(seed)
   with torch.no_grad():
