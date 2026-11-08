@@ -1,0 +1,96 @@
+{
+  "description": "synthetic known failure; explanatory demonstration, not blind discovery",
+  "hypothesis": "Nuisance feature x1 contributes -6 to logit and causes false negatives",
+  "prediction": "Zero x1 activation or remove output weight[0,1], rescuing positives with x1=1",
+  "scores": {
+    "diagnostic_baseline": 0.746999979019165,
+    "development_baseline": 0.7269999980926514,
+    "development_causal_activation_ablation": 1.0,
+    "development_weight_patch": 1.0,
+    "sealed_test_baseline": 0.5130000114440918,
+    "sealed_test_weight_patch": 1.0,
+    "preservation_baseline": 1.0,
+    "preservation_weight_patch": 1.0,
+    "sham_rerun_dev": 0.7269999980926514,
+    "random_equal_norm_mean_dev": 0.7645000010728836,
+    "random_equal_norm_best_dev": 1.0
+  },
+  "intervention": {
+    "hook_site": "activation",
+    "channel": 1,
+    "target": "action_head.weight[0,1]",
+    "before": -6.0,
+    "after": 0.0
+  },
+  "original_model_unchanged": true,
+  "matched_footprint_controls": [
+    {
+      "column": 0,
+      "delta": -6.0,
+      "coincides_with_repair": false,
+      "changed_entries": 1,
+      "delta_l2": 6.0,
+      "development_score": 0.4880000054836273
+    },
+    {
+      "column": 0,
+      "delta": 6.0,
+      "coincides_with_repair": false,
+      "changed_entries": 1,
+      "delta_l2": 6.0,
+      "development_score": 1.0
+    },
+    {
+      "column": 1,
+      "delta": -6.0,
+      "coincides_with_repair": false,
+      "changed_entries": 1,
+      "delta_l2": 6.0,
+      "development_score": 0.7269999980926514
+    },
+    {
+      "column": 1,
+      "delta": 6.0,
+      "coincides_with_repair": true,
+      "changed_entries": 1,
+      "delta_l2": 6.0,
+      "development_score": 1.0
+    }
+  ],
+  "control_notes": {
+    "dense_random": "20 equal-norm directions changing two entries; not sparsity matched",
+    "matched_footprint": "All four one-entry +/-6 edits in this layer; includes the repair"
+  },
+  "patch_manifest": {
+    "base_untouched": true,
+    "changed_elements": 1,
+    "total_parameters": 7,
+    "changed_fraction": 0.14285714285714285,
+    "edits": [
+      {
+        "name": "action_head.weight",
+        "shape": [
+          1,
+          2
+        ],
+        "changed_entries": 1,
+        "total_entries": 2,
+        "delta_l2": 6.0,
+        "relative_l2": 0.8320502943377284,
+        "edited_tensor_sha256": "d1a53b7ff53a607cad1af499faea43c1041e95c47469a6ed3cd6ad3e5169c4c0"
+      }
+    ],
+    "risk_note": "functional_call may update passed tensors if forward mutates parameters"
+  },
+  "probe_events": {
+    "features": 2,
+    "activation": 2,
+    "action_head": 2
+  },
+  "limitations": [
+    "synthetic, deliberately preconstructed circuit",
+    "binary inputs repeat across splits; independent draws, not unseen tasks",
+    "matched controls include the repair; no superiority claim over all controls",
+    "no generalization to large neural networks implied"
+  ]
+}

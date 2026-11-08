@@ -1,0 +1,177 @@
+{
+  "package": "weight-space-debugger",
+  "skill_format": "agentskills.io",
+  "files": [
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "4a2ea38428f08f0793f847ea656dedc7b9908f4fda1f642b90b00fc7efa125f5",
+      "bytes": 910
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "9aa500689db2564fd1b05c3aa081705ff12b15c91533981e40819d81837fa932",
+      "bytes": 87
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0ef37924ffd576041d7a4a4f837febe888e1b6f4cb263767bc957638d070be9b",
+      "bytes": 1077
+    },
+    {
+      "path": "README.md",
+      "sha256": "768af261fdfaaa7c8d68db8a969e76dce392884fe5de7ecbb83140d9f91d3a9c",
+      "bytes": 6142
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "91ff58efd9788c0e48b7782b9c4c9de8a22148b6c418ca262fe063faed0bbdba",
+      "bytes": 6877
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "5dcf049ffe965ea5373b3fc6c3adebb1bc1896ff54739cd9d01aa4fbe7cc74be",
+      "bytes": 266
+    },
+    {
+      "path": "assets/experiment-registry.json",
+      "sha256": "be6bceb1fd9472c8adf2210250c2a574e923ef792e4a8da2572aac8234aafacf",
+      "bytes": 1285
+    },
+    {
+      "path": "assets/incident-report.md",
+      "sha256": "4ed97cd4674630f38efc9a9cd37ce38d93cc7880277b532957cf9affdc6cc162",
+      "bytes": 2634
+    },
+    {
+      "path": "examples/skill-evaluation.md",
+      "sha256": "6599b641403acb2574d62f9f6ae0ef87c398970a23e3aae7bd348dacb67b201a",
+      "bytes": 4838
+    },
+    {
+      "path": "examples/toy-result.json",
+      "sha256": "989aac6ce81651b44c90c3dbdc5ad5d00491c14fb11ec6fe1870ea76b76bd8dc",
+      "bytes": 2912
+    },
+    {
+      "path": "examples/toy_case.py",
+      "sha256": "5cd2ba1f012057b4adb47f3259a13788fb5ff509d08f4e50935d8cb36119b995",
+      "bytes": 7698
+    },
+    {
+      "path": "examples/transformer-loop-investigation.md",
+      "sha256": "486cef1432d725616208893aac89200c6bc3de4bfb5b59ee846c7628947e9147",
+      "bytes": 4410
+    },
+    {
+      "path": "pytest.ini",
+      "sha256": "c809c969ec7e11b9ff37784e9c6fcc0b7c5148d168e18b05aed797e03fbd6ead",
+      "bytes": 27
+    },
+    {
+      "path": "references/01-evidence-and-method.md",
+      "sha256": "8549b679a8027bdc4dafbe253e06cb8a4d85e02af64a954d07f11af903802b5d",
+      "bytes": 5637
+    },
+    {
+      "path": "references/02-weight-space.md",
+      "sha256": "e6a4db72c1ec554b8443924bb9a05b6766ce2b466fb49768f4128e5318f9283b",
+      "bytes": 5353
+    },
+    {
+      "path": "references/03-transformers.md",
+      "sha256": "fe41a90e4950bf1b1b263895df7ec7e382b6718dc9f4f88d350534f90c8f9305",
+      "bytes": 4673
+    },
+    {
+      "path": "references/04-rl-and-control.md",
+      "sha256": "b55cf20ad8dbad97fe2ef031c4c1a67110e51727442b79898e32587a182ca8f1",
+      "bytes": 3866
+    },
+    {
+      "path": "references/05-editing-and-validation.md",
+      "sha256": "f77fb48779497c50804aa3520030255fb0afd7b3f05810784e07b9573fc2de82",
+      "bytes": 4386
+    },
+    {
+      "path": "references/06-toolbox-and-sources.md",
+      "sha256": "e4e570dc3ea8d244d67facab78574ca59e3f4b7e350247662c3021d66cc96838",
+      "bytes": 3919
+    },
+    {
+      "path": "references/07-training-debugging.md",
+      "sha256": "fea760eb6187e629a6ebebca2befdd41079cb2ff9ee1c01ba3f4634b2f19e91b",
+      "bytes": 5561
+    },
+    {
+      "path": "references/08-executable-investigation.md",
+      "sha256": "6d130f19b9bdc37555131d240ce2beaae5e2f92b81ad35222c7ed89f67ebb821",
+      "bytes": 9334
+    },
+    {
+      "path": "references/09-static-forensics.md",
+      "sha256": "02e7753bb54fdaa9083e1d0ef4d2016b109e1b2e810643bf6397044db76272be",
+      "bytes": 3193
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "c9e746af35dcfcb71bd039218e64e155e24afd59a8dec35ab864407c698510a3",
+      "bytes": 40
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "4b09ff2e8ce4de4f4a25aa0d02bc4b880640c8facc37623d31d78a6284d3d92e",
+      "bytes": 40
+    },
+    {
+      "path": "scripts/causal.py",
+      "sha256": "ba8f65fe85179f8cdcb07b2442538107a35252dc84264072a6c0deaf0e761e34",
+      "bytes": 4572
+    },
+    {
+      "path": "scripts/checkpoint_audit.py",
+      "sha256": "9a3cc34a90d8a207072117bccd2db00cc51191628bbbfeeee7c43cbfe6154e3b",
+      "bytes": 7305
+    },
+    {
+      "path": "scripts/compare_checkpoints.py",
+      "sha256": "aecc899f569beaba55d5dc0092a59981fe951f2c7fa1eaf221829b5f89b8d09c",
+      "bytes": 5603
+    },
+    {
+      "path": "scripts/metrics.py",
+      "sha256": "cd62c9b0125d8e960051e5050e13a2ac442a4fcef46982e373d371d441b0c23c",
+      "bytes": 1707
+    },
+    {
+      "path": "scripts/package_skill.py",
+      "sha256": "f29eadea0fadf338a761a629263f29be0c8be89cbd4487750e3b4da4d3285e7f",
+      "bytes": 5812
+    },
+    {
+      "path": "scripts/patching.py",
+      "sha256": "1ed4557af189bc54024b320d30d30849b7853563078b13c632b8ec8b380878dd",
+      "bytes": 6518
+    },
+    {
+      "path": "scripts/probe.py",
+      "sha256": "14486b15ec35ee8a430a58935488dae55cf5610d083a24cffb2572c1c901f98b",
+      "bytes": 4559
+    },
+    {
+      "path": "scripts/tensor_ops.py",
+      "sha256": "830ebaed1398c7930320ed69bc2023b678b09f521c1c7ea8662148c05290e050",
+      "bytes": 948
+    },
+    {
+      "path": "tests/test_package.py",
+      "sha256": "8f4995dbd7bc98158fd7005fa2854cdf7538b420bb4930ce714faa67e49eaf38",
+      "bytes": 2209
+    },
+    {
+      "path": "tests/test_skill.py",
+      "sha256": "7a1be49ef00fa8981b706a32c35faa1a7c27ee65c79687244f64800c87af2136",
+      "bytes": 12250
+    }
+  ],
+  "notes": "Synthetic demonstration; no blind real-model reasoning or repair validation."
+}

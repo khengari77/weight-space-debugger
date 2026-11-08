@@ -1,0 +1,4 @@
+interface:
+  display_name: "Weight-Space Debugger"
+  short_description: "Inspect model weights and test targeted repairs"
+  default_prompt: "Use $weight-space-debugger to investigate this model with evidence suited to the available access, preserving the baseline."

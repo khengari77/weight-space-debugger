@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "investigation_id": "REPLACE_ME",
+  "mode": "forensics",
+  "base_checkpoint_sha256": null,
+  "model_revision": null,
+  "code_revision": null,
+  "runtime": {
+    "torch": null,
+    "device": null,
+    "precision": null
+  },
+  "splits": {
+    "diagnostic": null,
+    "development": null,
+    "sealed_test": null
+  },
+  "goal": {
+    "primary_metric": null,
+    "direction": "maximize",
+    "minimum_gain": null
+  },
+  "guardrails": [
+    {
+      "metric": "REPLACE_ME",
+      "maximum_regression": null
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "REPLACE_ME",
+      "falsifier": "REPLACE_ME",
+      "status": "untested"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E001",
+      "hypothesis_id": "H1",
+      "registered_before_execution": true,
+      "intervention": null,
+      "control": null,
+      "sample_ids_sha256": null,
+      "seeds": [],
+      "forward_passes": 0,
+      "backward_passes": 0,
+      "results": {},
+      "confidence_interval": null,
+      "limitations": []
+    }
+  ],
+  "patch": {
+    "accepted": false,
+    "edit_type": null,
+    "changed_parameters": 0,
+    "total_parameters": 0,
+    "delta_l2": null,
+    "manifest_sha256": null
+  },
+  "verdict": "unresolved",
+  "access": "checkpoint_only"
+}
