@@ -18,7 +18,7 @@ for split in ['diagnostic','development','test']:
  for other in ['diagnostic','development','test']:
   if split!=other:assert not ({r['group'] for r in items if r['split']==split}&{r['group'] for r in items if r['split']==other})
 save('run.json',dict(start=time.time(),seed=2026,code_sha=os.environ.get('STUDY_CODE_SHA'),model_revision='973afd24965f72e36ca33b3055d56a652f456b4d',data_sha256=hashlib.sha256((ROOT/'manifest.json').read_bytes()).hexdigest(),torch=torch.__version__,gpu=torch.cuda.get_device_name(),backward_passes=0,supervision='Mean activation contrast from labelled diagnostic clips; no model optimizer'))
-proc,model=W.load('openai/whisper-small');model.to('cuda');tok=W.Tok(model,proc);P=f'model.decoder.layers.{model.config.decoder_layers-1}.';params=dict(model.named_parameters());layer=model.model.decoder.layers[-1]
+proc,model=W.load('openai/whisper-small');W.gpu_setup();model.to('cuda');tok=W.Tok(model,proc);P=f'model.decoder.layers.{model.config.decoder_layers-1}.';params=dict(model.named_parameters());layer=model.model.decoder.layers[-1]
 def run(split,tag,capture=False,hook=None):
  selected=[r for r in items if r['split']==split];rows=[];features=[]
  handle=layer.final_layer_norm.register_forward_hook(hook) if hook else None

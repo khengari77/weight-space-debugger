@@ -154,8 +154,8 @@
     },
     {
       "path": "examples/whisper/run.py",
-      "sha256": "f2f1a879a3551ccc3e824d6b32232138543857150dd5851d23f4e8599d735da1",
-      "bytes": 8428
+      "sha256": "bb3f2878325dadc7a0e937ef3fa37d454f04c3d105ff5f75f3ed075eed817ac7",
+      "bytes": 8442
     },
     {
       "path": "pytest.ini",
