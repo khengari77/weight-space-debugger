@@ -43,7 +43,17 @@ def score(rows,base=None):
   lookup={r['id']:r for r in base};out['speech_kept']=np.mean([W.norm(r['text'])==W.norm(lookup[r['id']]['text']) for r in sp])
  return out
 
-start=time.time();diag,X=run('diagnostic','diagnostic_base',True);save('diagnostic_metrics.json',score(diag))
+start=time.time()
+# Check our inspected greedy implementation against the library's generation path.
+pilot=next(r for r in items if r['split']=='diagnostic' and r['kind']=='speech')
+audio=np.load(ROOT/'data'/pilot['audio']);feats=W.features(proc,[audio],'cuda')
+with torch.inference_mode():
+ reference=model.generate(input_features=feats,language='en',task='transcribe',return_timestamps=False,do_sample=False,num_beams=1,max_new_tokens=tok.max_new)
+expected=proc.tokenizer.batch_decode(reference,skip_special_tokens=True)[0]
+actual=W.transcribe(model,proc,tok,[audio],batch=1)[0]['text']
+save('parity.json',{'reference':expected,'custom':actual,'normalized_equal':W.norm(expected)==W.norm(actual)})
+assert W.norm(expected)==W.norm(actual),'Greedy decoder parity failed'
+diag,X=run('diagnostic','diagnostic_base',True);save('diagnostic_metrics.json',score(diag))
 if score(diag)['hallucination']<.25:save('verdict.json',{'status':'failure_gate_not_met'});sys.exit(0)
 ns=[x[3] for r,x in zip(diag,X) if r['kind']=='nonspeech'];sp=[x[3] for r,x in zip(diag,X) if r['kind']=='speech'];d=torch.stack(ns).mean(0)-torch.stack(sp).mean(0);d=d/d.norm()
 nsproj=torch.stack(ns)@d;allsp=torch.cat([x[3:] for r,x in zip(diag,X) if r['kind']=='speech'])@d
