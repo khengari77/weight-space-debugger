@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "768af261fdfaaa7c8d68db8a969e76dce392884fe5de7ecbb83140d9f91d3a9c",
-      "bytes": 6142
+      "sha256": "7cc6a783a4b37347641c40c61141a71670024693303b1001d10086253326bfed",
+      "bytes": 6480
     },
     {
       "path": "SKILL.md",
@@ -41,6 +41,76 @@
       "path": "assets/incident-report.md",
       "sha256": "4ed97cd4674630f38efc9a9cd37ce38d93cc7880277b532957cf9affdc6cc162",
       "bytes": 2634
+    },
+    {
+      "path": "examples/plot_robustmnist.py",
+      "sha256": "7dc19e12c0ab63b9bb463d0fac3cfe16caeaf51063f386aa4223c86dcec4ab24",
+      "bytes": 2221
+    },
+    {
+      "path": "examples/robustmnist/accuracy.png",
+      "sha256": "32a314159a79fa8bee9aa7016046f50107012b7d13971c1fbd2e6b75063b5e12",
+      "bytes": 47083
+    },
+    {
+      "path": "examples/robustmnist/audit.json",
+      "sha256": "a7a738625c3890222017902e340769f3ef5f65706ca5bf02ec32f4b465cb7553",
+      "bytes": 18126
+    },
+    {
+      "path": "examples/robustmnist/evaluate-runtime.json",
+      "sha256": "7ffb07605a7478806fb1deff92139ab996330ea294bce7e8cfb1c5951b94ebe6",
+      "bytes": 153
+    },
+    {
+      "path": "examples/robustmnist/evaluation.json",
+      "sha256": "61fecd273df04409af2db3ffb6e9fd91f2d543820dfb344025f9b2e9cc2e4234",
+      "bytes": 1705
+    },
+    {
+      "path": "examples/robustmnist/failures.png",
+      "sha256": "ba4235408e9717e483c15213d5fe5b07bad52a0fc59914f72bc106be21ba54d4",
+      "bytes": 55515
+    },
+    {
+      "path": "examples/robustmnist/figure-provenance.json",
+      "sha256": "b0ecb7d0a8bbcde3b9bbc89636e14b5788bd6c6473fe22370d6e646165f67150",
+      "bytes": 223
+    },
+    {
+      "path": "examples/robustmnist/investigate-runtime.json",
+      "sha256": "b881f01f74af5e22f22caf1b73ec403b9082e5a43287007b09fcaf1aa8ccbd62",
+      "bytes": 149
+    },
+    {
+      "path": "examples/robustmnist/investigation.json",
+      "sha256": "03789aedea65a55e9a278de6e7622c76b7d430dd13bb44a592f34ae64aaaedbe",
+      "bytes": 200
+    },
+    {
+      "path": "examples/robustmnist/provenance.json",
+      "sha256": "d28868fd9752e45e07e5e2a9017746b2b2292af5efb991fafe77e9cb94d92bf5",
+      "bytes": 617
+    },
+    {
+      "path": "examples/robustmnist/reproduce-runtime.json",
+      "sha256": "d48648b17d9d9a45e652b53ae1c7a6d953f632a7ed1291af94c3947e131f2a97",
+      "bytes": 283
+    },
+    {
+      "path": "examples/robustmnist/reproduction.json",
+      "sha256": "7211447b5509fbc2b409c499b6b9420229bbd24ffc776e1912eddc3c87acfdf0",
+      "bytes": 2571
+    },
+    {
+      "path": "examples/robustmnist-case-study.md",
+      "sha256": "52de63d6782b2dad69db7de04c1475bc7252ef9dc1ddb1bed1c6b3c09dacf4b1",
+      "bytes": 5519
+    },
+    {
+      "path": "examples/robustmnist_case.py",
+      "sha256": "ffddc868398ac0c27e117d5628f55952a22fed1937daecdbaae108bfe6a8ef5a",
+      "bytes": 13838
     },
     {
       "path": "examples/skill-evaluation.md",
@@ -144,8 +214,8 @@
     },
     {
       "path": "scripts/package_skill.py",
-      "sha256": "f29eadea0fadf338a761a629263f29be0c8be89cbd4487750e3b4da4d3285e7f",
-      "bytes": 5812
+      "sha256": "c9bd9105aee4a9db6f9fb8f2d9f352082e83907617b5c2338477f54f1986b20e",
+      "bytes": 5878
     },
     {
       "path": "scripts/patching.py",
@@ -168,10 +238,15 @@
       "bytes": 2209
     },
     {
+      "path": "tests/test_real_case.py",
+      "sha256": "c1550f238888f4e4d93661aea87eb0eb585c73146f31dcf5859aa6a3fd32a0ec",
+      "bytes": 1640
+    },
+    {
       "path": "tests/test_skill.py",
       "sha256": "7a1be49ef00fa8981b706a32c35faa1a7c27ee65c79687244f64800c87af2136",
       "bytes": 12250
     }
   ],
-  "notes": "Synthetic demonstration; no blind real-model reasoning or repair validation."
+  "notes": "Synthetic demonstration and real-model robustness case; no blind agent benchmark."
 }

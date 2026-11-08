@@ -1,0 +1,692 @@
+{
+  "file": "/tmp/robustmnist-case/model.safetensors",
+  "bytes": 1831376,
+  "sha256": "9fb6645f700d0bcc50cd76f6ec8b31e031d777fe8634b85d2a162406eee482d7",
+  "sample_design": "axis0_stratified",
+  "sample_limit_per_tensor": 262144,
+  "chunk_elements": 65536,
+  "tensors": [
+    {
+      "numel": 128,
+      "scanned_elements": 128,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.6478368043899536,
+      "finite_max": 0.7647112607955933,
+      "finite_mean": 0.20499961531868394,
+      "finite_std": 0.30304694602568244,
+      "sampled_l2": 4.139368744551102,
+      "name": "decision_network.0.bias",
+      "shape": [
+        128
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 65536,
+      "scanned_elements": 65536,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.10205693542957306,
+      "finite_max": 0.07828477025032043,
+      "finite_mean": -0.0004887867569307251,
+      "finite_std": 0.012623804786594826,
+      "sampled_l2": 3.2341155889657784,
+      "name": "decision_network.0.weight",
+      "shape": [
+        128,
+        512
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 11,
+      "scanned_elements": 11,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.1745939403772354,
+      "finite_max": 0.3225401043891907,
+      "finite_mean": -0.05694369666955688,
+      "finite_std": 0.1500264222852618,
+      "sampled_l2": 0.5322176544565318,
+      "name": "decision_network.3.bias",
+      "shape": [
+        11
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 1408,
+      "scanned_elements": 1408,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.6142955422401428,
+      "finite_max": 0.28948965668678284,
+      "finite_mean": -0.02559720334020519,
+      "finite_std": 0.1425799612316306,
+      "sampled_l2": 5.435608625206893,
+      "name": "decision_network.3.weight",
+      "shape": [
+        11,
+        128
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 9,
+      "scanned_elements": 9,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.0625,
+      "finite_max": 0.25,
+      "finite_mean": 0.1111111111111111,
+      "finite_std": 0.057265355911356404,
+      "sampled_l2": 0.375,
+      "name": "pre_processor.filter_pattern_a",
+      "shape": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 9,
+      "scanned_elements": 9,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.33333333,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -2.0,
+      "finite_max": 2.0,
+      "finite_mean": 0.0,
+      "finite_std": 1.1547005383792515,
+      "sampled_l2": 3.4641016151377544,
+      "name": "pre_processor.filter_pattern_b",
+      "shape": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 9,
+      "scanned_elements": 9,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.33333333,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -2.0,
+      "finite_max": 2.0,
+      "finite_mean": 0.0,
+      "finite_std": 1.1547005383792515,
+      "sampled_l2": 3.4641016151377544,
+      "name": "pre_processor.filter_pattern_c",
+      "shape": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 2,
+      "scanned_elements": 2,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.01650640368461609,
+      "finite_max": 0.9043242931365967,
+      "finite_mean": 0.4604153484106064,
+      "finite_std": 0.4439089447259903,
+      "sampled_l2": 0.9044749242071914,
+      "name": "pre_processor.gating_network.1.bias",
+      "shape": [
+        2
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 4,
+      "scanned_elements": 4,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.26261088252067566,
+      "finite_max": 0.25940650701522827,
+      "finite_mean": 0.03218765277415514,
+      "finite_std": 0.1915718845471351,
+      "sampled_l2": 0.3885142568300445,
+      "name": "pre_processor.gating_network.1.weight",
+      "shape": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 576,
+      "scanned_elements": 576,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.7141557931900024,
+      "finite_max": 0.43985822796821594,
+      "finite_mean": -0.005994294809109451,
+      "finite_std": 0.17965801081556879,
+      "sampled_l2": 4.314191589879633,
+      "name": "pre_processor.mapping_conv.weight",
+      "shape": [
+        32,
+        2,
+        3,
+        3
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 32,
+      "scanned_elements": 32,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.600421130657196,
+      "finite_max": 0.20806746184825897,
+      "finite_mean": -0.22930308425566182,
+      "finite_std": 0.18357533888049077,
+      "sampled_l2": 1.6616118390935584,
+      "name": "pre_processor.normalization.bias",
+      "shape": [
+        32
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 1,
+      "scanned_elements": 1,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 469.0,
+      "finite_max": 469.0,
+      "finite_mean": 469.0,
+      "finite_std": 0.0,
+      "sampled_l2": 469.0,
+      "name": "pre_processor.normalization.num_batches_tracked",
+      "shape": [],
+      "dtype": "I64"
+    },
+    {
+      "numel": 32,
+      "scanned_elements": 32,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.27524909377098083,
+      "finite_max": 0.33550000190734863,
+      "finite_mean": -0.043286057662044186,
+      "finite_std": 0.09668936367786035,
+      "sampled_l2": 0.5992666407895932,
+      "name": "pre_processor.normalization.running_mean",
+      "shape": [
+        32
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 32,
+      "scanned_elements": 32,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.008664827793836594,
+      "finite_max": 0.17437085509300232,
+      "finite_mean": 0.04204708070028573,
+      "finite_std": 0.03868264266377213,
+      "sampled_l2": 0.3231991999430407,
+      "name": "pre_processor.normalization.running_var",
+      "shape": [
+        32
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 32,
+      "scanned_elements": 32,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.7400819063186646,
+      "finite_max": 1.6156744956970215,
+      "finite_mean": 1.1557454876601696,
+      "finite_std": 0.22074268465621616,
+      "sampled_l2": 6.656064819578793,
+      "name": "pre_processor.normalization.weight",
+      "shape": [
+        32
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 18432,
+      "scanned_elements": 18432,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.27213552594184875,
+      "finite_max": 0.32978731393814087,
+      "finite_mean": -0.01520234380700869,
+      "finite_std": 0.06463582534289838,
+      "sampled_l2": 9.014702793620433,
+      "name": "stage_a.core_conv.weight",
+      "shape": [
+        64,
+        32,
+        3,
+        3
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 64,
+      "scanned_elements": 64,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -1.1202387809753418,
+      "finite_max": 0.0024956448469311,
+      "finite_mean": -0.46062804525354295,
+      "finite_std": 0.3032060009429902,
+      "sampled_l2": 4.411708603845476,
+      "name": "stage_a.core_norm.bias",
+      "shape": [
+        64
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 1,
+      "scanned_elements": 1,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 469.0,
+      "finite_max": 469.0,
+      "finite_mean": 469.0,
+      "finite_std": 0.0,
+      "sampled_l2": 469.0,
+      "name": "stage_a.core_norm.num_batches_tracked",
+      "shape": [],
+      "dtype": "I64"
+    },
+    {
+      "numel": 64,
+      "scanned_elements": 64,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -1.3906364440917969,
+      "finite_max": 1.2741588354110718,
+      "finite_mean": -0.4506551574013429,
+      "finite_std": 0.5246444388505149,
+      "sampled_l2": 5.532981015599896,
+      "name": "stage_a.core_norm.running_mean",
+      "shape": [
+        64
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 64,
+      "scanned_elements": 64,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.39096197485923767,
+      "finite_max": 1.926833152770996,
+      "finite_mean": 1.1295768260024488,
+      "finite_std": 0.3320166933430147,
+      "sampled_l2": 9.41888788509623,
+      "name": "stage_a.core_norm.running_var",
+      "shape": [
+        64
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 64,
+      "scanned_elements": 64,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.6669580340385437,
+      "finite_max": 1.3387516736984253,
+      "finite_mean": 0.9662187332287431,
+      "finite_std": 0.14154006374221567,
+      "sampled_l2": 7.812245690294416,
+      "name": "stage_a.core_norm.weight",
+      "shape": [
+        64
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 98,
+      "scanned_elements": 98,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.7834983468055725,
+      "finite_max": 0.533022403717041,
+      "finite_mean": -0.10927415601624062,
+      "finite_std": 0.27324901921939376,
+      "sampled_l2": 2.913309978767688,
+      "name": "stage_a.refinement.spatial_weighting.weight",
+      "shape": [
+        1,
+        2,
+        7,
+        7
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 73728,
+      "scanned_elements": 73728,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.2301817536354065,
+      "finite_max": 0.253742516040802,
+      "finite_mean": -0.008024392498345932,
+      "finite_std": 0.050833164909267294,
+      "sampled_l2": 13.973594669189195,
+      "name": "stage_b.core_conv.weight",
+      "shape": [
+        128,
+        64,
+        3,
+        3
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 128,
+      "scanned_elements": 128,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.9766429662704468,
+      "finite_max": 0.2147209197282791,
+      "finite_mean": -0.41688147227978334,
+      "finite_std": 0.1879130096183188,
+      "sampled_l2": 5.173488863676879,
+      "name": "stage_b.core_norm.bias",
+      "shape": [
+        128
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 1,
+      "scanned_elements": 1,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 469.0,
+      "finite_max": 469.0,
+      "finite_mean": 469.0,
+      "finite_std": 0.0,
+      "sampled_l2": 469.0,
+      "name": "stage_b.core_norm.num_batches_tracked",
+      "shape": [],
+      "dtype": "I64"
+    },
+    {
+      "numel": 128,
+      "scanned_elements": 128,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -1.576101541519165,
+      "finite_max": 0.04138830304145813,
+      "finite_mean": -0.8021141882272786,
+      "finite_std": 0.37605867048401537,
+      "sampled_l2": 10.02274082818762,
+      "name": "stage_b.core_norm.running_mean",
+      "shape": [
+        128
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 128,
+      "scanned_elements": 128,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.2462223470211029,
+      "finite_max": 1.0892772674560547,
+      "finite_mean": 0.6113846448715776,
+      "finite_std": 0.153646455935776,
+      "sampled_l2": 7.132110306775639,
+      "name": "stage_b.core_norm.running_var",
+      "shape": [
+        128
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 128,
+      "scanned_elements": 128,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.6435110569000244,
+      "finite_max": 1.3091076612472534,
+      "finite_mean": 0.967852539382875,
+      "finite_std": 0.1263292828100897,
+      "sampled_l2": 11.042884409777386,
+      "name": "stage_b.core_norm.weight",
+      "shape": [
+        128
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 98,
+      "scanned_elements": 98,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -1.0719695091247559,
+      "finite_max": 0.7074230313301086,
+      "finite_mean": -0.10331791223202623,
+      "finite_std": 0.2882474088769145,
+      "sampled_l2": 3.0312693136373587,
+      "name": "stage_b.refinement.spatial_weighting.weight",
+      "shape": [
+        1,
+        2,
+        7,
+        7
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 294912,
+      "scanned_elements": 258048,
+      "complete_scan": false,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.18135914206504822,
+      "finite_max": 0.35464778542518616,
+      "finite_mean": -0.0001716903535708027,
+      "finite_std": 0.03823801359316409,
+      "sampled_l2": 19.424504523382055,
+      "name": "stage_c.core_conv.weight",
+      "shape": [
+        256,
+        128,
+        3,
+        3
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 256,
+      "scanned_elements": 256,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -1.0618125200271606,
+      "finite_max": -0.2110416442155838,
+      "finite_mean": -0.6431340523413382,
+      "finite_std": 0.1934691593700935,
+      "sampled_l2": 10.745661523449389,
+      "name": "stage_c.core_norm.bias",
+      "shape": [
+        256
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 1,
+      "scanned_elements": 1,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 469.0,
+      "finite_max": 469.0,
+      "finite_mean": 469.0,
+      "finite_std": 0.0,
+      "sampled_l2": 469.0,
+      "name": "stage_c.core_norm.num_batches_tracked",
+      "shape": [],
+      "dtype": "I64"
+    },
+    {
+      "numel": 256,
+      "scanned_elements": 256,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -0.45167574286460876,
+      "finite_max": 0.2441311627626419,
+      "finite_mean": -0.05485291374915846,
+      "finite_std": 0.13693429728220058,
+      "sampled_l2": 2.360194916367996,
+      "name": "stage_c.core_norm.running_mean",
+      "shape": [
+        256
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 256,
+      "scanned_elements": 256,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.2434769719839096,
+      "finite_max": 0.94205242395401,
+      "finite_mean": 0.424102614808362,
+      "finite_std": 0.1442418797840831,
+      "sampled_l2": 7.167370468265161,
+      "name": "stage_c.core_norm.running_var",
+      "shape": [
+        256
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 256,
+      "scanned_elements": 256,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": 0.8805623054504395,
+      "finite_max": 1.4465113878250122,
+      "finite_mean": 1.1259417918045074,
+      "finite_std": 0.11187094014104751,
+      "sampled_l2": 18.10377216492951,
+      "name": "stage_c.core_norm.weight",
+      "shape": [
+        256
+      ],
+      "dtype": "F32"
+    },
+    {
+      "numel": 98,
+      "scanned_elements": 98,
+      "complete_scan": true,
+      "zero_fraction_of_sample": 0.0,
+      "nan_in_sample": 0,
+      "inf_in_sample": 0,
+      "finite_min": -1.327268362045288,
+      "finite_max": 1.9185397624969482,
+      "finite_mean": -0.023129638481044153,
+      "finite_std": 0.44525009798721155,
+      "sampled_l2": 4.413694340744582,
+      "name": "stage_c.refinement.spatial_weighting.weight",
+      "shape": [
+        1,
+        2,
+        7,
+        7
+      ],
+      "dtype": "F32"
+    }
+  ],
+  "warnings": [
+    "Incomplete scan, NOT guaranteed finite: stage_c.core_conv.weight"
+  ],
+  "tensor_count": 36,
+  "metadata": null,
+  "inspected_parameters": 456982,
+  "skipped_tensor_count": 0
+}

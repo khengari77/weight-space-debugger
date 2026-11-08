@@ -1,0 +1,98 @@
+{
+  "clean": {
+    "accuracy": 0.9955000281333923,
+    "unknown": 0.0005000000237487257,
+    "confident_wrong": 0.0,
+    "count": 2000
+  },
+  "transforms": {
+    "x:2": {
+      "accuracy": 0.9929999709129333,
+      "unknown": 0.0010000000474974513,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 5
+    },
+    "y:2": {
+      "accuracy": 0.9944999814033508,
+      "unknown": 0.0005000000237487257,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 2
+    },
+    "x:-2": {
+      "accuracy": 0.9929999709129333,
+      "unknown": 0.0020000000949949026,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 5
+    },
+    "y:-2": {
+      "accuracy": 0.9950000047683716,
+      "unknown": 0.0005000000237487257,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 2
+    },
+    "x:4": {
+      "accuracy": 0.9955000281333923,
+      "unknown": 0.0005000000237487257,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 0
+    },
+    "y:4": {
+      "accuracy": 0.9934999942779541,
+      "unknown": 0.0005000000237487257,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 4
+    },
+    "x:-4": {
+      "accuracy": 0.9944999814033508,
+      "unknown": 0.0010000000474974513,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 2
+    },
+    "y:-4": {
+      "accuracy": 0.9959999918937683,
+      "unknown": 0.0,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 0
+    },
+    "rotation:15": {
+      "accuracy": 0.9925000071525574,
+      "unknown": 0.0005000000237487257,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 7
+    },
+    "rotation:-15": {
+      "accuracy": 0.9925000071525574,
+      "unknown": 0.001500000013038516,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 6
+    },
+    "rotation:30": {
+      "accuracy": 0.9850000143051147,
+      "unknown": 0.001500000013038516,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 23
+    },
+    "rotation:-30": {
+      "accuracy": 0.984000027179718,
+      "unknown": 0.0024999999441206455,
+      "confident_wrong": 0.0,
+      "count": 2000,
+      "clean_correct_to_wrong": 23
+    }
+  },
+  "selected": null,
+  "revision": "6742662f0e48a88b7d069d2094d211f8fd106d5a",
+  "checkpoint_sha256": "9fb6645f700d0bcc50cd76f6ec8b31e031d777fe8634b85d2a162406eee482d7",
+  "parameters": 455991
+}

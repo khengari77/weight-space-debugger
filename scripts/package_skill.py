@@ -16,7 +16,7 @@ PACKAGE_GLOBS = (
     ".gitignore", "SKILL.md", "README.md", "LICENSE", "requirements.txt",
     "requirements-dev.txt", "pytest.ini", "agents/*.yaml", "scripts/*.py", "references/*.md",
     "assets/*.md", "assets/*.json", "examples/*.md", "examples/*.py",
-    "examples/toy-result.json", "tests/*.py", ".github/workflows/*.yml",
+    "examples/toy-result.json", "examples/robustmnist/*.json", "examples/robustmnist/*.png", "tests/*.py", ".github/workflows/*.yml",
 )
 
 
@@ -36,7 +36,7 @@ def source_manifest(root: Path) -> dict:
                         "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)})
     return {"package": "weight-space-debugger", "skill_format": "agentskills.io",
             "files": records,
-            "notes": "Synthetic demonstration; no blind real-model reasoning or repair validation."}
+            "notes": "Synthetic demonstration and real-model robustness case; no blind agent benchmark."}
 
 
 def validate_package(root: Path) -> list[str]:

@@ -113,6 +113,13 @@ and [the separate agent reasoning evaluation cards](examples/skill-evaluation.md
 Script tests do not validate an agent's mechanistic reasoning, and no blind real-model
 repair benchmark has been performed.
 
+## Real-model case study
+
+[RobustMNIST: a 455,991-parameter published classifier](examples/robustmnist-case-study.md)
+was tested on real handwritten digits. The tested distortions did not meet the
+predeclared threshold for surgery; the report includes measured errors and a
+negative replication rather than claiming a successful repair.
+
 ## License and attribution
 
 Original code and documentation are available under the [MIT license](LICENSE),

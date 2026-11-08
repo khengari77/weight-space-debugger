@@ -1,0 +1,13 @@
+{
+  "source_ids": [
+    9422,
+    8275,
+    4731,
+    9629,
+    3225,
+    1522
+  ],
+  "model_forward_batches": 64,
+  "input_examples": 4000,
+  "selection": "first six diagnostic errors at +30 degrees; no sealed examples"
+}

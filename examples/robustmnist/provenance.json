@@ -1,0 +1,11 @@
+{
+  "model_revision": "6742662f0e48a88b7d069d2094d211f8fd106d5a",
+  "files": {
+    "fashion-labels.gz": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5",
+    "fashion-images.gz": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073",
+    "labels.gz": "f7ae60f92e00ec6debd23a6088c31dbd2371eca3ffa0defaefb259924204aec6",
+    "images.gz": "8d422c7b0a1c1c79245a5bcf07fe86e33eeafee792b84584aec276f5a2dbc4e6",
+    "model.py": "4ca557a212f5d7653ddfe80b753e2f5f5419b2b0a688579bdbce3cc5ce2ac043",
+    "model.safetensors": "9fb6645f700d0bcc50cd76f6ec8b31e031d777fe8634b85d2a162406eee482d7"
+  }
+}

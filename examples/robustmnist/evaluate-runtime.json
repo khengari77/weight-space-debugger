@@ -1,0 +1,8 @@
+{
+  "seconds": 94.42503439899883,
+  "torch": "2.15.0+cpu",
+  "seed": 2026,
+  "backward_passes": 0,
+  "forward_batches": 314,
+  "input_examples": 20000
+}

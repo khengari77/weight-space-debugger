@@ -1,0 +1,5 @@
+{
+  "verdict": "negative_replication",
+  "candidate": null,
+  "reason": "No diagnostic condition reached 50 clean-correct to transformed-wrong cases; causal localization and surgery not justified."
+}
